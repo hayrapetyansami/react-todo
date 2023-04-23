@@ -1,13 +1,110 @@
+*{
+	box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+#root {
+	margin: 16px;
+}
+
+.todo-app {
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 32px;
+	border-radius: 8px;
+	background: #eee;
+}
+
+.todo-app .todo-header form {
+	display: flex;
+}
+
+.todo-app .todo-header form input {
+	width: 100%;
+	background: #fff;
+	padding: 16px 24px;
+	border: none;
+	border-radius: 8px 0px 0px 8px;
+	outline: none;
+}
+
+.todo-app .todo-header form button {
+	border: none;
+	background: #059405;
+	color: #fff;
+	border-radius: 0px 8px 8px 0px;
+	cursor: pointer;
+}
+
+.todo-app .todo-list-items {
+	margin: 8px 0px;
+}
+
+.todo-app .todo-list-items .todo-list-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	border-bottom: 1px solid #ccc;
+}
+
+.todo-app .todo-list-items .todo-list-item:last-child {
+	border-bottom: none;
+}
+
+.todo-app .todo-list-items .todo-list-item label {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	cursor: pointer;
+	width: 100%;
+	color: #5d5d5d;
+	padding: 16px 0;
+}
+
+.todo-app .todo-list-items .todo-list-item button {
+	display: block;
+	border: none;
+	padding: 8px 16px;
+	background: #d00;
+	border-radius: 8px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.todo-app .todo-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.todo-app .todo-footer button {
+	display: block;
+	padding: 8px 12px;
+	background: #b00;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	text-transform: capitalize;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.todo-app .todo-footer span {
+	display: block;
+	color: #5d5d5d;
+	font-style: italic;
 }
